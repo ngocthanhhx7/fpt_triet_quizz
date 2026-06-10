@@ -1,0 +1,203 @@
+{
+  "assetBase": "assets/mindmap",
+  "audioBase": "audio",
+  "status": "sourced portrait and backdrop manifest for Triet Quest 2.5D chapters",
+  "strategy": {
+    "portraitModels": "Use public Wikimedia/Wikipedia historical portraits as primary 2.5D character plates, then layer lighting, props, motion, and paper effects in CSS/GSAP.",
+    "backdropPlates": "Use downloaded local Wikimedia/Wikipedia thumbnails as primary scene plates; keep remote URLs in source data only as fallback/reference.",
+    "fallback": "SceneBackdrop always keeps procedural set-pieces, gradients, and labels so the chapter remains usable if an external image fails."
+  },
+  "visualReferences": {
+    "illuminatedManuscriptFrame": [
+      "https://commons.wikimedia.org/wiki/File:Scriptorium.jpg",
+      "https://commons.wikimedia.org/wiki/Category:Illuminated_manuscripts",
+      "https://commons.wikimedia.org/wiki/File:Livre_d%27heures_BN_Napoli_IB27_f85_(Annonce_aux_bergers).jpg"
+    ],
+    "museumPedestal": [
+      "https://commons.wikimedia.org/wiki/File:Charles_Darwin_MET_117328.jpg",
+      "https://commons.wikimedia.org/wiki/File:F%C3%A9lix_Lecomte_-_Bust_of_Marie_Antoinette_-_Walters_27238.jpg"
+    ],
+    "implementationNote": "Current implementation uses CSS-built manuscript frames and plinths first; download extra decorative assets only after license review."
+  },
+  "philosophers": [
+    {
+      "id": "socrates",
+      "name": "Socrates",
+      "audioSrc": "audio/Socrates.mp3",
+      "display": {
+        "presentation": "plaster-bust",
+        "galleryFrame": "illuminated-manuscript",
+        "pedestal": {
+          "label": "Socrates",
+          "material": "plaster",
+          "tone": "#d9d4c8"
+        }
+      },
+      "portrait": {
+        "localPath": "assets/mindmap/portraits/socrates.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Socrates_Louvre.jpg",
+        "downloaded": true
+      },
+      "backdropPlate": {
+        "localPath": "assets/mindmap/backdrops/socrates-agora.jpg",
+        "remoteUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Agora_-_Ath%C3%A8nes_%28GRA1%29_-_2022-03-26_-_97.jpg/330px-Agora_-_Ath%C3%A8nes_%28GRA1%29_-_2022-03-26_-_97.jpg",
+        "sourcePage": "https://en.wikipedia.org/wiki/Ancient_Agora_of_Athens",
+        "downloaded": true
+      },
+      "nextBackdropLayers": ["foreground amphorae", "dialogue circle silhouettes", "distant Acropolis haze"]
+    },
+    {
+      "id": "plato",
+      "name": "Plato",
+      "audioSrc": "audio/Plato.mp3",
+      "display": {
+        "presentation": "plaster-bust",
+        "galleryFrame": "illuminated-manuscript",
+        "pedestal": {
+          "label": "Plato",
+          "material": "marble",
+          "tone": "#d8d0c2"
+        }
+      },
+      "portrait": {
+        "localPath": "assets/mindmap/portraits/plato.png",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Plato_Silanion_Musei_Capitolini_MC1377.png",
+        "downloaded": true
+      },
+      "backdropPlate": {
+        "localPath": "assets/mindmap/backdrops/plato-cave.jpg",
+        "sourcePage": "https://en.wikipedia.org/wiki/Allegory_of_the_cave",
+        "downloaded": true
+      },
+      "nextBackdropLayers": ["shadow wall", "ascending cave steps", "abstract forms sky"]
+    },
+    {
+      "id": "aristotle",
+      "name": "Aristotle",
+      "audioSrc": "audio/Aristotle.mp3",
+      "display": {
+        "presentation": "plaster-bust",
+        "galleryFrame": "illuminated-manuscript",
+        "pedestal": {
+          "label": "Aristotle",
+          "material": "stone",
+          "tone": "#cfc7b4"
+        }
+      },
+      "portrait": {
+        "localPath": "assets/mindmap/portraits/aristotle.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Aristotle_Altemps_Inv8575.jpg",
+        "downloaded": true
+      },
+      "backdropPlate": {
+        "localPath": "assets/mindmap/backdrops/aristotle-lyceum.png",
+        "sourcePage": "https://en.wikipedia.org/wiki/Lyceum_(classical)",
+        "downloaded": true
+      },
+      "nextBackdropLayers": ["specimen table", "logic scrolls", "Lyceum garden columns"]
+    },
+    {
+      "id": "hegel",
+      "name": "Hegel",
+      "audioSrc": "audio/Hegel.mp3",
+      "display": {
+        "presentation": "portrait-plate",
+        "galleryFrame": "illuminated-manuscript"
+      },
+      "portrait": {
+        "localPath": "assets/mindmap/portraits/hegel.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Jakob_Schlesinger_-_Hegel_1831.jpg",
+        "downloaded": true
+      },
+      "backdropPlate": {
+        "localPath": "assets/mindmap/backdrops/hegel-study.jpg",
+        "sourcePage": "https://en.wikipedia.org/wiki/The_Bookworm_(Spitzweg)",
+        "downloaded": true
+      },
+      "nextBackdropLayers": ["contradiction manuscript", "spiral study room", "storm of history"]
+    },
+    {
+      "id": "feuerbach",
+      "name": "Feuerbach",
+      "audioSrc": "audio/Feuerbach.mp3",
+      "display": {
+        "presentation": "portrait-plate",
+        "galleryFrame": "illuminated-manuscript"
+      },
+      "portrait": {
+        "localPath": "assets/mindmap/portraits/feuerbach.jpg",
+        "remoteUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Ludwig_Feuerbach-1.2_V01-1.1.1_cropped_and_rotated.jpg/250px-Ludwig_Feuerbach-1.2_V01-1.1.1_cropped_and_rotated.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ludwig_Feuerbach-1.2_V01-1.1.1_cropped_and_rotated.jpg",
+        "downloaded": true
+      },
+      "backdropPlate": {
+        "localPath": "assets/mindmap/backdrops/feuerbach-desk.jpg",
+        "sourcePage": "https://en.wikipedia.org/wiki/Desk",
+        "downloaded": true
+      },
+      "nextBackdropLayers": ["warm writing table", "human portrait wall", "distant steeple window"]
+    },
+    {
+      "id": "marx",
+      "name": "Marx",
+      "audioSrc": "audio/Marx.mp3",
+      "display": {
+        "presentation": "portrait-plate",
+        "galleryFrame": "illuminated-manuscript"
+      },
+      "portrait": {
+        "localPath": "assets/mindmap/portraits/marx.png",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored_%26_Adjusted_(3x4_cropped_b).png",
+        "downloaded": true
+      },
+      "backdropPlate": {
+        "localPath": "assets/mindmap/backdrops/marx-factory.jpg",
+        "remoteUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Strickmaschine_im_Museum.JPG/330px-Strickmaschine_im_Museum.JPG",
+        "sourcePage": "https://en.wikipedia.org/wiki/Power_loom",
+        "downloaded": true
+      },
+      "nextBackdropLayers": ["open manuscript ledger", "factory floor", "city chimneys"]
+    },
+    {
+      "id": "engels",
+      "name": "Engels",
+      "audioSrc": "audio/Engels.mp3",
+      "display": {
+        "presentation": "portrait-plate",
+        "galleryFrame": "illuminated-manuscript"
+      },
+      "portrait": {
+        "localPath": "assets/mindmap/portraits/engels.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Friedrich_Engels_portrait_(cropped).jpg",
+        "downloaded": true
+      },
+      "backdropPlate": {
+        "localPath": "assets/mindmap/backdrops/engels-manchester.jpg",
+        "sourcePage": "https://en.wikipedia.org/wiki/Manchester",
+        "downloaded": true
+      },
+      "nextBackdropLayers": ["drafting table", "systems map", "city and nature panels"]
+    },
+    {
+      "id": "lenin",
+      "name": "Lenin",
+      "audioSrc": "audio/Lenin.mp3",
+      "display": {
+        "presentation": "portrait-plate",
+        "galleryFrame": "illuminated-manuscript"
+      },
+      "portrait": {
+        "localPath": "assets/mindmap/portraits/lenin.jpg",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lenin_in_1920_(cropped).jpg",
+        "downloaded": true
+      },
+      "backdropPlate": {
+        "localPath": "assets/mindmap/backdrops/lenin-smolny.jpg",
+        "remoteUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/RUS-2016-SPB-Smolny_Institute_02.jpg/330px-RUS-2016-SPB-Smolny_Institute_02.jpg",
+        "sourcePage": "https://en.wikipedia.org/wiki/Smolny_Institute",
+        "downloaded": true
+      },
+      "nextBackdropLayers": ["map table", "operations room", "station dawn"]
+    }
+  ]
+}

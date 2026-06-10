@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#020617" />
+    </radialGradient>
+    
+    <!-- Neon Gradients -->
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="100%" stop-color="#0057FF" />
+    </linearGradient>
+    
+    <linearGradient id="neonMagenta" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF00F5" />
+      <stop offset="100%" stop-color="#7000FF" />
+    </linearGradient>
+    
+    <linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6FFF00" />
+      <stop offset="100%" stop-color="#00FF85" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background container -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGlow)" />
+  <rect width="504" height="504" x="4" y="4" rx="124" stroke="#ffffff" stroke-opacity="0.05" stroke-width="8" />
+
+  <!-- Background Decorative Grid (Philosophical structure) -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="2">
+    <line x1="256" y1="0" x2="256" y2="512" />
+    <line x1="0" y1="256" x2="512" y2="256" />
+    <circle cx="256" cy="256" r="180" fill="none" />
+    <circle cx="256" cy="256" r="100" fill="none" />
+  </g>
+
+  <!-- Glowing Aura for the Brain of Wisdom -->
+  <circle cx="256" cy="180" r="70" fill="#6FFF00" fill-opacity="0.12" filter="url(#neonGlow)" />
+
+  <!-- The Greek Column (Ancient Philosophy Foundation) -->
+  <g stroke="url(#neonMagenta)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#neonGlow)">
+    <!-- Capital (Top) -->
+    <path d="M 170 260 L 342 260" />
+    <path d="M 180 275 L 332 275" />
+    <path d="M 185 260 C 185 275, 195 275, 195 260" />
+    <path d="M 317 260 C 317 275, 327 275, 327 260" />
+    
+    <!-- Shaft (Vertical pillars) -->
+    <line x1="205" y1="275" x2="205" y2="400" />
+    <line x1="256" y1="275" x2="256" y2="400" />
+    <line x1="307" y1="275" x2="307" y2="400" />
+    
+    <!-- Base (Bottom) -->
+    <path d="M 180 400 L 332 400" />
+    <rect x="160" y="408" width="192" height="18" rx="6" />
+  </g>
+
+  <!-- Glowing Brain / Cloud of Wisdom (above the column) -->
+  <!-- Designed with overlapping digital circles and nodes -->
+  <g stroke="url(#neonGreen)" stroke-width="6" fill="none" stroke-linecap="round" filter="url(#neonGlow)">
+    <!-- Left hemisphere -->
+    <path d="M 256 195 C 235 195, 225 185, 225 175 C 225 160, 240 155, 245 150 C 240 140, 245 125, 260 125 C 270 125, 275 135, 275 145" />
+    <path d="M 225 175 C 205 175, 195 160, 205 145 C 215 130, 235 135, 245 150" />
+    
+    <!-- Right hemisphere -->
+    <path d="M 256 195 C 277 195, 287 185, 287 175 C 287 160, 272 155, 267 150 C 272 140, 267 125, 252 125 C 242 125, 237 135, 237 145" style="transform: scaleX(-1); transform-origin: 256px;" />
+    <path d="M 225 175 C 205 175, 195 160, 205 145 C 215 130, 235 135, 245 150" style="transform: scaleX(-1); transform-origin: 256px;" />
+    
+    <!-- Center connection / lightning spark of insight -->
+    <path d="M 256 120 L 256 145 L 246 155 L 266 165 L 256 190" stroke="url(#neonCyan)" stroke-width="4" />
+  </g>
+
+  <!-- Futuristic Cyber Sunglasses (floating in front of the column) -->
+  <g filter="url(#neonGlow)">
+    <!-- Left Lens -->
+    <polygon points="150,295 240,285 245,315 165,335" fill="url(#neonCyan)" fill-opacity="0.85" stroke="#ffffff" stroke-width="3" />
+    <!-- Right Lens -->
+    <polygon points="362,295 272,285 267,315 347,335" fill="url(#neonCyan)" fill-opacity="0.85" stroke="#ffffff" stroke-width="3" />
+    <!-- Bridge -->
+    <line x1="240" y1="288" x2="272" y2="288" stroke="#ffffff" stroke-width="5" stroke-linecap="round" />
+    <!-- Glowing LED neon stripe across the glasses -->
+    <path d="M 155 298 L 235 290 M 277 290 L 357 298" stroke="#ffffff" stroke-width="2" opacity="0.8" />
+  </g>
+
+  <!-- Sparkles / Nodes of ideas -->
+  <circle cx="150" cy="150" r="6" fill="#6FFF00" filter="url(#neonGlow)" />
+  <circle cx="362" cy="150" r="6" fill="#6FFF00" filter="url(#neonGlow)" />
+  <circle cx="256" cy="90" r="8" fill="#00F0FF" filter="url(#neonGlow)" />
+  <line x1="256" y1="98" x2="256" y2="114" stroke="#00F0FF" stroke-width="3" stroke-dasharray="2 4" />
+</svg>
